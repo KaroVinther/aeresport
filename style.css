@@ -1,0 +1,650 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+
+video {
+    height: 100%;
+    width: 100%;
+    background: none;
+}
+
+header,
+body,
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    font-family: 'Crimson text', serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #444;
+}
+
+p {
+    font-family: 'Crimson text', serif;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: 'Lobster two', serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Lobster two', serif;
+    color: white;
+    font-size: 3rem;
+}
+
+
+h3 {
+    font-family: 'Alice', serif;
+    font-size: 1.7rem;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    html,
+    body {
+        min-width: 320px;
+    }
+
+}
+
+
+
+
+
+/**********NAV*********/
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Alice', serif;
+}
+
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+@media screen and (max-width:712px) {
+    .nav {
+
+        background-color: rgba(255, 0, 0, 0);
+        background-image: linear-gradient(black, rgba(255, 255, 255, 0));
+        flex-direction: column;
+    }
+
+    .nav a {
+        padding: 5px 5px;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+/*********** SPLASH ****************/
+.center {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.parallax {
+    background-image: url(nyebilleder/gran.jpg);
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.75;
+    filter: brightness(0.7);
+}
+
+.center p {
+    font-family: 'Alice', serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding-bottom: 1.75rem;
+    letter-spacing: .25rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+/******* HJEM ******/
+
+#hjem {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    margin: 5vw;
+}
+
+
+#hjem .box {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    background: #FFF;
+    border-color: rgba(144, 144, 144, 0.25);
+    justify-content: space-between;
+}
+
+.box .image {
+    width: 100%;
+    display: block;
+    padding: 1rem;
+
+}
+
+.box .content {
+    padding: 1rem;
+}
+
+.image video {
+    width: 100%;
+    background-color: white;
+}
+
+.image img {
+    width: 100%;
+    align-self: flex-end;
+}
+
+#hjem h3 {
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    #hjem {
+        margin: 0 0 2.5rem 0;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+}
+
+
+/************ PRISER **************/
+
+.priserlogo {
+    background-image: url(nyebilleder/landskablille.jpg);
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.overskrift {
+    margin: 0 auto;
+    height: 100%
+}
+
+.overskrift h2 {
+    text-align: center;
+    padding: 70px 0 0 0;
+}
+
+@media only screen and (max-device-width: 800px) {
+    .priserlogo {
+        background-attachment: scroll;
+    }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px 10px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+table.dum {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#priser {
+    display: block;
+}
+
+#priser .content {
+    padding: 1rem 0 0 0;
+    margin: 7.5rem 0 0 0;
+    font-size: 1.7rem;
+
+}
+
+#priser .text {
+    text-align: center;
+    margin: 0 0 7.5rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #priser .content {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 642px) {
+    #priser .content {
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+
+    #priser .text {
+        margin: auto;
+        margin: 0 1rem;
+    }
+}
+
+/************* SPØRGSMÅL ***********/
+
+.sporgsmallogo {
+    background-image: url(nyebilleder/hus.jpg);
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media only screen and (max-device-width: 800px) {
+    .sporgsmallogo {
+        background-attachment: scroll;
+    }
+}
+
+
+.accordion {
+    background-color: rgba(119, 119, 119, 0);
+    color: #444;
+    padding: 18px;
+    width: 40%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-family: 'Alice', serif;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 1rem;
+    color: #1c1c1c;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+#sporgsmal ul {
+    list-style: disc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: rgba(255, 252, 252, 0);
+    overflow: hidden;
+    width: 40%;
+}
+
+.skema {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 629px) {
+    .accordion {
+        padding: 0px;
+        width: 90%;
+    }
+
+    .accordion h3 {
+        font-size: 1rem;
+    }
+
+    .panel {
+        width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 1025px) {
+    .accordion {
+        width: 70%;
+    }
+
+    .panel {
+        width: 70%;
+    }
+}
+
+
+/********** INSTRUKTION ********/
+.instruktionlogo {
+    background-image: url(nyebilleder/vej.jpg);
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media only screen and (max-device-width: 800px) {
+    .instruktionlogo {
+        background-attachment: scroll;
+    }
+}
+
+
+#instruktion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#instruktion .box {
+    width: 70%;
+    margin: 3rem;
+    background: #FFF;
+    border-color: rgba(144, 144, 144, 0.25);
+}
+
+#instruktion ol {
+    padding: 1rem 2rem;
+    line-height: 2.2rem;
+    font-size: 1.1rem;
+    font-family: 'Crimson text', serif;
+    line-height: 2.45rem;
+}
+
+@media only screen and (max-width: 600px) {
+    #instruktion ol {
+        width: 100%;
+        line-height: 1rem;
+        font-size: 1rem;
+        font-family: 'Crimson text', serif;
+        line-height: 2rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    #instruktion .box {
+        width: 90%;
+        margin: 1rem;
+    }
+
+    #instruktion {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/************* KONTAKT ***************/
+
+.kontaktlogo {
+    background-image: url(nyebilleder/landskab_2lille.jpg);
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media only screen and (max-device-width: 800px) {
+    .kontaktlogo {
+        background-attachment: scroll;
+    }
+}
+
+#kontakt {
+    text-align: center;
+}
+
+#kontakt .column {
+    text-align: left;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: 'Crimson text', serif;
+}
+
+input[type=submit] {
+    background-color: #4c964f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Crimson text', serif;
+}
+
+input[type=submit]:hover {
+    background-color: #4c964f;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: rgba(242, 242, 242, 0);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.column1 {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+.column2 {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin-top: 6px;
+    padding: 20px;
+    text-align: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 626px) {
+
+    .column,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+label {
+    font-family: 'Crimson text', serif;
+}
+
+
+
+
+/*********** GALLERI ^*********/
+
+.gallerilogo {
+    background-image: url(nyebilleder/hegnlille.jpg);
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media only screen and (max-device-width: 800px) {
+    .gallerilogo {
+        background-attachment: scroll;
+    }
+}
+
+.indhold {
+    margin: 1rem;
+}
+
+#galleri {
+    text-align: center;
+}
+
+.masonry {
+    /* Masonry container */
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+    margin: 1.5em;
+    padding: 2em 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+}
+
+.item {
+    display: inline-block;
+    background: #fff;
+    padding: 1em;
+    margin: 0 0 1.5em;
+    width: 100%;
+    -webkit-transition: 1s ease all;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0 #ccc;
+}
+
+.item img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+.item:hover {
+    transform: scale(1.2);
+}
+
+
+/*************** FOOTER **************/
+
+#footer {
+    padding: 1rem 0 2rem 0;
+    background: #000;
+    text-align: center;
+}
+
+#footer .info {
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+}
